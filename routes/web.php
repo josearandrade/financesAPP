@@ -4,12 +4,20 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
+    return view('home.home');
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('dashboard.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/dashboard/accounts', function () {
+    return view('dashboard.accounts');
+})->middleware(['auth', 'verified'])->name('accounts');
+
+Route::get('/dashboard/finances', function () {
+    return view('dashboard.finances');
+})->middleware(['auth', 'verified'])->name('finances');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -18,7 +26,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/about', function () {
-    return view('about');
+    return view('home.about');
 });
 
 require __DIR__.'/auth.php';

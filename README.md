@@ -29,10 +29,6 @@ This app have the proposure to my studies in those technologies:
 -   Account Number
 -   Balance
 
-### Categories
-
--   Category Name (e.g., food, transport, etc.)
-
 ### Transactions
 
 -   Date
@@ -40,6 +36,10 @@ This app have the proposure to my studies in those technologies:
 -   Category
 -   Account
 -   Type (income, expense)
+
+-   #### Categories
+
+-   Category Name (e.g., food, transport, etc.)
 
 ### Budgets
 
